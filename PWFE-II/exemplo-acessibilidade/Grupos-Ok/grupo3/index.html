@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Modal Acessível</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="open">Abrir Modal</button>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="title">
+    <div class="modal-content">
+      <button id="close" aria-label="Fechar">×</button>
+      <h2 id="title">Inscreva-se</h2>
+      <label for="email">Seu email</label>
+      <input id="email" type="email">
+      <button type="button">Enviar</button>
+      <a href="#">Termos</a>
+    </div>
+  </div>
+  <p>Pode usar Tab e Escape para sair do modal.</p>
+  <script src="script.js"></script>
+</body>
+</html>

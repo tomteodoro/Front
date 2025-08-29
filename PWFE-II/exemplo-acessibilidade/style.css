@@ -1,0 +1,32 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle__button {
+  border: 0;
+  background: #dedede;
+  height: 30px;
+  width: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggle__button::after {
+  content: '';
+  display: block;
+  background: #515250;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background .5s, transform .5s;
+}
+
+.toggle__button--on::after {
+  background: #61b315;
+  transform: translateX(100%);
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eventos Sustentáveis - Acessível</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a><!-- Link para pular navegação -->
+
+  <header class="topo">
+    <div class="branding">
+      <img src="images/logo.png" alt="Logo Eventos Sustentáveis" width="48" height="48" />
+      <h1>Eventos Sustentáveis</h1>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section aria-labelledby="agenda-titulo" id="agenda">
+      <h2 id="agenda-titulo">Próximos eventos</h2>
+
+      <ul class="cards" role="list">
+        <li class="card">
+          <img src="images/feira.webp" alt="Foto de uma feira com barracas de produtos orgânicos" />
+          <h3>Feira Orgânica Municipal</h3>
+          <p>Domingo, das 9 horas às 13 horas — Praça Central</p>
+          <a class="botao" href="#contato">Inscrever-se</a>
+        </li>
+
+        <li class="card">
+          <img src="images/palestra.jpg" alt="Auditório com pessoas assistindo a uma palestra" />
+          <h3>Palestra: Energia Solar em Casa</h3>
+          <p>Quarta, às 19 horas — Auditório Verde</p>
+          <a class="botao" href="#contato">Inscrever-se</a>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="sobre-titulo" id="sobre">
+      <h2 id="sobre-titulo">Sobre</h2>
+      <p>
+        Promovemos eventos voltados à sustentabilidade, acessíveis e inclusivos
+        para toda a comunidade. Nosso foco é educação ambiental e tecnologia limpa.
+      </p>
+
+      <details>
+        <summary>Como garantimos acessibilidade?</summary>
+        <ul>
+          <li>Navegação por teclado garantindo foco visível</li>
+          <li>Contraste adequado e fontes legíveis</li>
+          <li>Texto alternativo em imagens</li>
+          <li>Estrutura semântica e uso criterioso de ARIA</li>
+        </ul>
+      </details>
+    </section>
+
+    <section aria-labelledby="contato-titulo" id="contato">
+      <h2 id="contato-titulo">Inscreva-se</h2>
+
+      <!-- Região para mensagens dinâmicas -->
+      <div aria-live="polite" aria-atomic="true" class="live-region" id="mensagens"></div>
+
+      <form novalidate aria-describedby="ajuda-form">
+        <p id="ajuda-form">Campos marcados com * são obrigatórios.</p>
+
+        <div class="campo">
+          <label for="nome">Nome *</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <fieldset class="campo">
+          <legend>Preferência de contato</legend>
+          <div>
+            <input id="pref-email" name="preferencia" type="radio" value="email" />
+            <label for="pref-email">E-mail</label>
+          </div>
+          <div>
+            <input id="pref-whats" name="preferencia" type="radio" value="whatsapp" />
+            <label for="pref-whats">WhatsApp</label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="evento">Escolha o evento *</label>
+          <select id="evento" name="evento" required>
+            <option value="">Selecione…</option>
+            <option>Feira Orgânica Municipal</option>
+            <option>Palestra: Energia Solar em Casa</option>
+          </select>
+        </div>
+
+        <button class="botao" type="submit">Enviar inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2025 Eventos Sustentáveis</p>
+    <nav aria-label="Links de rodapé">
+      <ul class="menu">
+        <li><a href="#politica">Política de privacidade</a></li>
+        <li><a href="#acessibilidade">Declaração de Acessibilidade</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

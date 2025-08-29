@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Uso indevido de ARIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1 role="button" title="Título tooltip">Nossos Produtos</h1>
+    <section role="link" onclick="location='#'">
+      <article role="checkbox" onclick="this.setAttribute('aria-checked', this.getAttribute('aria-checked')==='true'?'false':'true')">
+        <img src="https://placehold.co/300x150">
+        <p>Coisas ótimas aqui</p>
+      </article>
+    </section>
+  </main>
+  <footer role="main">© 2025</footer>
+  <script src="script.js"></script>
+</body>
+</html>

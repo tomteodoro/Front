@@ -1,0 +1,146 @@
+:root {
+  --cor-primaria: #0a7d4f;
+  --cor-primaria-escura: #055235;
+  --texto: #111827;        /* quase preto */
+  --fundo: #ffffff;        /* branco */
+  --foco: #ffbf47;         /* amarelo forte */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+/* Foco sempre visível */
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+/* Link para pular conteúdo */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--foco);
+  color: #111;
+  padding: 8px 12px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
+}
+.topo {
+  border-bottom: 4px solid var(--cor-primaria);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--cor-primaria-escura);
+}
+.menu a:hover,
+.menu a:focus {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 0;
+  padding: 0;
+}
+.card {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.campo {
+  margin-block: 12px;
+
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+input, select, button, textarea {
+  font: inherit;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  border-color: var(--cor-primaria);
+}
+
+.botao {
+  display: inline-block;
+  background: var(--cor-primaria);
+  color: #fff;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover,
+.botao:focus-visible {
+  background: var(--cor-primaria-escura);
+}
+
+.live-region {
+  min-height: 1.2em;
+  margin-bottom: 8px;
+}
+
+.rodape {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 24px;
+  padding: 16px;
+}
+
+/* Contraste e tamanhos adequados já garantidos acima */

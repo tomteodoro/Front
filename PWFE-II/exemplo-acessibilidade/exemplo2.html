@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo com ARIA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    button {
+      width: 50px;
+      height: 50px;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 50%;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button aria-label="Fechar" onclick="alert('Fechado!')">
+    ✖
+  </button>
+  <br>
+  <p>
+  <span class="toggle">
+    <button class="toggle__button" aria-pressed="true" aria-label="Alterar entre os modos ligado e desligado"></button>
+    <button class="toggle__button" aria-pressed="false"></button>
+    <button class="toggle__button"></button>
+  </span>
+  </p>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body{background:#fff;color:#222;font-family:Verdana;margin:0;padding:20px}
+.banner{background:#f0f0f0;border:1px solid #ccc;padding:12px}
+.approved{color:green;font-weight:bold}
+.rejected{color:red;font-weight:bold}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px}
+.dot.approved{background:green}
+.dot.rejected{background:red}
+.link{color:#0645ad;text-decoration:underline}
+.link:focus{outline:2px solid #000}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topo">
+    <div class="logo"><img src="images/logo.png"></div> <!-- sem alt -->
+    <div class="menu">
+      <div class="item" onclick="goto('#agenda')">Agenda</div>
+      <div class="item" onclick="goto('#sobre')">Sobre</div>
+      <div class="item" onclick="goto('#contato')">Contato</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1 style="font-size:18px;color:#9aa;">eventos</h1> <!-- contraste ruim e heading minúsculo -->
+  </div>
+
+  <div class="conteudo">
+    <div id="agenda">
+      <div class="titulo">Próximos</div> <!-- sem h2 semântico -->
+      <div class="cards">
+        <div class="card" onclick="alert('inscrito!')" tabindex="-1"> <!-- interação só por mouse -->
+          <img src="images/feira.webp"> <!-- sem alt -->
+          <div class="nome">Feira Orgânica</div>
+          <div class="quando">Domingo</div>
+          <a class="botao-link" href="#" onclick="return false;">Inscrever</a> <!-- link que não navega -->
+        </div>
+
+        <div class="card">
+          <img src="images/palestra.jpg"> <!-- sem alt -->
+          <div class="nome">Palestra Solar</div>
+          <div class="quando">Quarta</div>
+          <div class="botao-link" onclick="alert('ok')">Inscrever</div> <!-- div como botão -->
+        </div>
+      </div>
+    </div>
+
+    <div id="sobre">
+      <div class="titulo">sobre</div>
+      <p style="color:#bbb">textinho em cinza claro sobre fundo branco para ficar estiloso :)</p> <!-- contraste baixíssimo -->
+    </div>
+
+    <div id="contato">
+      <div class="titulo">Inscrição</div>
+      <form onsubmit="return envia()">
+        <div class="campo">
+          <input type="text" placeholder="Nome*"> <!-- sem label -->
+        </div>
+        <div class="campo">
+          <input type="text" placeholder="Email*"> <!-- tipo errado, sem validação -->
+        </div>
+        <div class="campo">
+          <select>
+            <option>Selecione...</option>
+            <option>Feira</option>
+            <option>Palestra</option>
+          </select>
+        </div>
+        <a class="botao-link" href="#" onclick="return envia()">Enviar</a> <!-- âncora como botão -->
+      </form>
+    </div>
+  </div>
+
+  <div class="rodape">
+    <a href="#" onclick="return false;">política</a>
+    <a href="#" onclick="return false;">acessibilidade</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

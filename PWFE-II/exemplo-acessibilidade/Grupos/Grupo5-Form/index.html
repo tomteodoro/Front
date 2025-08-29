@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulário com rótulos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <div class="checkbox" onclick="this.dataset.checked=this.dataset.checked==='1'?'0':'1'">Concordo</div>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="msg"></div>
+  <script src="script.js"></script>
+</body>
+</html>

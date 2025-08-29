@@ -1,0 +1,54 @@
+:root{
+    --bg:#f7f7f7;
+    --text:#9aa0a6;
+    --link:#b0b0b0;
+}
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Verdana;
+    margin:0;
+    padding:20px;
+}
+.banner{
+    background:#fafafa;
+    border:1px solid #eee;
+    padding:12px;
+}
+.green{
+    color:#7ec97e;
+}
+.red{
+    color:#e07a7a;
+}
+.tiny{
+    font-size:10px;
+    line-height:1.1;
+}
+.legend{
+    list-style:none;
+    padding:0;
+    display:flex;
+    gap:20px;
+}
+.dot{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+.dot.green{
+    background:#7ec97e;
+}
+.dot.red{
+    background:#e07a7a;
+}
+.link{
+    color:var(--link);
+    text-decoration:none;
+    border-bottom:1px solid var(--link);
+    padding-bottom:2px;
+}
+.link:focus{
+    outline:none;
+}

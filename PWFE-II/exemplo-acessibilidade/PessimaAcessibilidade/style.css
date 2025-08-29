@@ -1,0 +1,23 @@
+/* reset agressivo que remove foco visível */
+*:focus { outline: none; }
+
+body { font-family: Arial; margin:0; color:#666; } /* contraste fraco */
+.topo { display:flex; justify-content:space-between; padding:8px 10px; border-bottom:1px solid #eee; }
+.menu { display:flex; gap:8px; }
+.item { padding:6px 8px; cursor:pointer; }
+
+.hero { padding:8px 10px; background:#fafafa; }
+
+.titulo { font-size:16px; color:#999; margin:12px 0; } /* contraste ruim e hierarquia fraca */
+
+.cards { display:grid; grid-template-columns: 1fr 1fr; gap:8px; }
+.card { border:1px solid #eee; padding:8px; }
+.card img { width:100%; height:120px; object-fit:cover; }
+
+.botao-link { color:#88a; text-decoration:none; padding:6px 10px; border:1px solid #ddd; display:inline-block; }
+.botao-link:hover { background:#f3f3f3; } /* foco não visível */
+
+.campo input, .campo select { width:100%; padding:6px; margin:6px 0; border:1px solid #ddd; color:#aaa; } /* texto apagadinho */
+
+.rodape { padding:10px; border-top:1px solid #eee; display:flex; gap:12px; }
+.rodape a { color:#aaa; } /* mais contraste ruim */

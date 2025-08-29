@@ -1,0 +1,18 @@
+body{
+    font-family:system-ui;
+    margin:20px;
+}
+h1{
+    font-size:22px;
+}
+section{
+    border:1px solid #ccc;
+    padding:10px;
+}
+article{
+    padding:10px;
+    border:1px dashed #aaa;
+}
+footer{
+    margin-top:40px;
+}

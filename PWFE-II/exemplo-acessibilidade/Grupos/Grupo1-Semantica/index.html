@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Somente Divs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo"><img src="https://placehold.co/80x40" /></div>
+    <div class="nav-item" onclick="go('#home')">Home</div>
+    <div class="nav-item" onclick="go('#about')">Sobre</div>
+    <div class="nav-item" onclick="go('#contact')">Contato</div>
+  </div>
+
+  <div id="home" class="section">
+    <div class="big">bem-vindo ao nosso site</div>
+    <div class="text">este é um texto. sem títulos. tudo em letras minúsculas. imagens sem alt.</div>
+    <div><img src="https://placehold.co/600x200"></div>
+    <div class="button" onclick="alert('clicado')">Clique aqui</div>
+  </div>
+
+  <div id="about" class="section">
+    <div class="big">sobre nós</div>
+    <div class="text">nós fazemos muitas coisas. clique nas caixas abaixo.</div>
+    <div class="card" onclick="alert('caixa 1')">caixa 1</div>
+    <div class="card" onclick="alert('caixa 2')">caixa 2</div>
+  </div>
+
+  <div id="contact" class="section">
+    <div class="big">contato</div>
+    <div class="text">nos envie um e-mail <div class="link" onclick="location='mailto:ola@exemplo.com.br'">ola@exemplo.com.br</div></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

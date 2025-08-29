@@ -1,0 +1,44 @@
+body{
+    font-family:Arial;
+    margin:0
+}
+.nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    padding:10px 20px;
+    background:#ddd;
+    position:sticky;
+    top:0
+}
+.nav-item{
+    cursor:pointer;
+    padding:6px 10px;
+    border-radius:4px
+}
+.section{
+    padding:40px 20px
+}
+.big{
+    font-size:32px
+}
+.button{
+    display:inline-block;
+    padding:10px 16px;
+    background:#444;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer
+}
+.card{
+    padding:20px;
+    margin:10px 0;
+    background:#eee;
+    cursor:pointer
+}
+.link{
+    display:inline-block;
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer
+}

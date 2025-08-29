@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Mim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Olá! Meu nome é Wellinton</h1>
+    <button id="alterar-tema">Alterar Tema</button>
+  </header>
+
+  <main class="conteudo">
+    <section class="perfil">
+      <img src="imagens/perfil.png" alt="Minha foto" class="foto" />
+      <div class="descricao">
+        <h2>Sobre Mim</h2>
+        <p id="descricao">Sou instrutor do curso de desenvolvimento de sistemas. Gosto de tecnologia, música e jogos.</p>
+        <button onclick="alterarTexto()">Mudar Descrição</button>
+      </div>
+    </section>
+
+    <section class="contato">
+      <h2>Quer me conhecer melhor? Entre em Contato</h2>
+      <form onsubmit="return validarFormulario()">
+        <input type="text" id="nome" placeholder="Seu nome" />
+        <input type="email" id="email" placeholder="Seu e-mail" />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p id="data-hora"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+background-color: rgb(134, 72, 249);
+}
+
+.centro{
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.case{
+
+    justify-items: center;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px black;
+    padding-left: 2px;
+    background-blend-mode: color;
+}
