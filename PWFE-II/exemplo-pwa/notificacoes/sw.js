@@ -11,13 +11,13 @@ self.addEventListener("push", event => {
 self.addEventListener("notificationclick", event => {
   event.notification.close();
   event.waitUntil(
-    clients.openWindow("http://127.0.0.1:5500/exemplo-pwa/notificacoes/notificacao-sw.html")
+    clients.openWindow("http://127.0.0.1:5500/PWFE-II/exemplo-pwa/notificacoes/notificacao-sw.html")
   );
 });
 
 
-self.addEventListener("sync", event => {
-  if (event.tag === "enviar-form") {
-    // lógica para enviar dados armazenados
-  }
-});
+// self.addEventListener("sync", event => {
+//   if (event.tag === "enviar-form") {
+//     // lógica para enviar dados armazenados
+//   }
+// });

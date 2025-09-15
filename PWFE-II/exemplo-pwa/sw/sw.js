@@ -1,8 +1,8 @@
-// const CACHE_NAME = "Cache do Desenvolvedor";
-// const FILES_TO_CACHE = [
-//   "index.html",
-//   "sw.js"
-// ];
+const CACHE_NAME = "Cache do Desenvolvedor";
+const FILES_TO_CACHE = [
+  "index.html",
+  "sw.js"
+];
 
 // Registra o Service Worker
 if ("serviceWorker" in navigator) {
@@ -15,41 +15,41 @@ if ("serviceWorker" in navigator) {
 self.addEventListener("install", event => {
   console.log("Service Worker: Instalado!");
   // Abre cache e adiciona arquivos
-  // event.waitUntil(
-  //   caches.open(CACHE_NAME).then(cache => {
-  //     console.log("Cache Aberto!");
-  //     return cache.addAll(FILES_TO_CACHE);
-  //   })
-  // );
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      console.log("Cache Aberto!");
+      return cache.addAll(FILES_TO_CACHE);
+    })
+  );
 });
 
 // Evento de ativação
 self.addEventListener("activate", event => {
-  console.log("Service Worker: Ativado!");
+  console.log("Service Worker: Ativo!");
 });
 
-// Evento de interceptação de requisições
+// Intercepta de requisições
 self.addEventListener("fetch", event => {
   console.log("Interceptando:", event.request.url);
 
   // Resposta personalizada para qualquer requisição
-  event.respondWith(
-    new Response("Hello do Service Worker!", {
-      headers: { "Content-Type": "text/plain" }
-    })
-  );
-
-  // Recuperar do cache, se disponível
   // event.respondWith(
-  //   caches.match(event.request).then(response => {
-  //     // Se tiver no cache, retorna
-  //     if (response) {
-  //       return response;
-  //     }
-  //     // Senão, busca na rede
-  //     return fetch(event.request);
+  //   new Response("Hello do Service Worker!", {
+  //     headers: { "Content-Type": "text/plain" }
   //   })
   // );
+
+  // Recuperar do cache, se disponível
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      // Se tiver no cache, retorna
+      if (response) {
+        return response;
+      }
+      // Senão, busca na rede
+      return fetch(event.request);
+    })
+  );
 });
 
 // Evento de push (exemplo de notificação)

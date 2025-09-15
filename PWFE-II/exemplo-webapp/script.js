@@ -9,6 +9,14 @@ function adicionar() {
     }
 }
 
+
+
+
+
+
+
+
+
 // let deferredPrompt;
 // const installButton = document.getElementById('installButton'); // Crie um botão para "Instalar"
 
