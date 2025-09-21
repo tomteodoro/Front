@@ -32,7 +32,7 @@ form.addEventListener("submit", async e => {
     // Se está offline, salva e agenda o sincronismo
     navigator.serviceWorker.ready.then(reg => {
       reg.active.postMessage({ mensagem });
-      status.textContent = "Mensagem salva! Será enviada quando houver internet.";
+      status.textContent = "Mensagem salva! Será enviada quando houver conexão.";
     });
   }
 

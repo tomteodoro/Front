@@ -1,8 +1,8 @@
 // Escuta o evento "push"
 self.addEventListener("push", event => {
-  const data = event.data ? event.data.text() : "Clique em mim para saber qual aplicação disparou essa notificação.";
+  const msg = event.data ? event.data.text() : "Clique em mim para saber qual aplicação disparou essa notificação.";
   self.registration.showNotification("Olá! Essa é uma push notification. Aparece mesmo se a aba estiver fechada.", {
-    body: data,
+    body: msg,
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6X6SlR7kCahU2erUQtNwHMTGyznLddopKDA&s"
   });
 });
@@ -14,10 +14,3 @@ self.addEventListener("notificationclick", event => {
     clients.openWindow("http://127.0.0.1:5500/PWFE-II/exemplo-pwa/notificacoes/notificacao-sw.html")
   );
 });
-
-
-// self.addEventListener("sync", event => {
-//   if (event.tag === "enviar-form") {
-//     // lógica para enviar dados armazenados
-//   }
-// });

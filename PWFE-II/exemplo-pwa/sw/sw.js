@@ -4,7 +4,7 @@ const FILES_TO_CACHE = [
   "sw.js"
 ];
 
-// Registra o Service Worker
+// Evento de registro
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js")
   .then(() => console.log("Service Worker: Registrado!"))
@@ -28,7 +28,7 @@ self.addEventListener("activate", event => {
   console.log("Service Worker: Ativo!");
 });
 
-// Intercepta de requisições
+// Evento de interceptação de requisições
 self.addEventListener("fetch", event => {
   console.log("Interceptando:", event.request.url);
 
@@ -39,7 +39,7 @@ self.addEventListener("fetch", event => {
   //   })
   // );
 
-  // Recuperar do cache, se disponível
+  // Recupera do cache, se disponível
   event.respondWith(
     caches.match(event.request).then(response => {
       // Se tiver no cache, retorna
