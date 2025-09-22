@@ -22,7 +22,7 @@ self.addEventListener("install", event => {
 
 // Ativação
 self.addEventListener("activate", () => {
-  console.log("SW: Ativado");
+  console.log("SW: Ativo");
 });
 
 // Intercepta requisições

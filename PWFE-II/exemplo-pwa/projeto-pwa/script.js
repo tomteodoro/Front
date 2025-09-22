@@ -17,11 +17,11 @@ form.addEventListener("submit", async e => {
   const texto = form.nota.value;
 
   if (navigator.onLine) {
-    // Se estiver online → envia direto (simulado)
+    // Se estiver online, envia direto
     console.log("Enviando ao servidor:", texto);
     statusMsg.textContent = "Tarefa anotada com sucesso!";
   } else {
-    // Se offline → manda para o SW salvar
+    // Se offline, manda para o SW salvar
     navigator.serviceWorker.ready.then(reg => {
       reg.active.postMessage({ nota: texto });
       statusMsg.textContent = "Tarefa salva! Será enviada quando houver internet.";
@@ -29,12 +29,12 @@ form.addEventListener("submit", async e => {
   }
 
   notas.push(texto);
-  renderNotas();
+  mostraNotas();
   form.reset();
 });
 
 // Renderizar lista de notas
-function renderNotas() {
+function mostraNotas() {
   listaNotas.innerHTML = "";
   notas.forEach(n => {
     const li = document.createElement("li");
