@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Crachá Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Monte seu crachá digital</h1>
+
+  <div class="camera-section">
+    <video id="video" autoplay></video>
+    <button id="capture">Capturar Foto</button>
+    <canvas id="canvas" width="160" height="120"></canvas>
+  </div>
+
+  <input type="text" id="nameInput" placeholder="Digite seu nome">
+  <button onclick="getLocation()">Obter Localização</button>
+
+  <div id="elements">
+    <div id="name" class="draggable" draggable="true">[Seu Nome]</div>
+    <div id="photo" class="draggable" draggable="true"><img id="photoImg" src="" alt=""></div>
+    <div id="location" class="draggable" draggable="true">[Localização]</div>
+  </div>
+
+  <h2>Crachá</h2>
+  <div id="badge" class="dropzone">
+    Arraste os elementos aqui
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
