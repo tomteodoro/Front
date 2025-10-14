@@ -2,21 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Crachá Digital</title>
+  <title>Exemplo APIs</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Monte seu crachá digital</h1>
-
-  <div class="camera-section">
-    <video id="video" autoplay></video>
-    <button id="capture">Capturar Foto</button>
-    <canvas id="canvas" width="160" height="120"></canvas>
-  </div>
+  <h1>Exemplo APIs: Drag and drop, Câmera e Geolocation</h1>
 
   <input type="text" id="nameInput" placeholder="Digite seu nome">
-  <button onclick="getLocation()">Obter Localização</button>
 
   <div id="elements">
     <div id="name" class="draggable" draggable="true">[Seu Nome]</div>
@@ -24,9 +17,15 @@
     <div id="location" class="draggable" draggable="true">[Localização]</div>
   </div>
 
-  <h2>Crachá</h2>
+  <h2>Arraste os elementos aqui</h2>
   <div id="badge" class="dropzone">
-    Arraste os elementos aqui
+    drag and drop
+  </div>
+
+  <div class="camera-section">
+    <video id="video" autoplay></video>
+    <button id="capture">Capturar Foto</button>
+    <canvas id="canvas" width="160" height="120"></canvas>
   </div>
 
   <script src="script.js"></script>
