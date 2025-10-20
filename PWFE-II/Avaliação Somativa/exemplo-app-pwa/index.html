@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Serviços Mococa - Exemplo PWA</title>
+  <link rel="icon" href="icon.png">
+
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="app.js" as="script">
+
+  <link rel="prefetch" href="https://jsonplaceholder.typicode.com/users">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <header class="bg-primary text-white py-3" role="banner">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <img src="icon.png" alt="" class="logo" aria-hidden="true" onerror="this.style.display='none'">
+        <h1 class="h5 mb-0">Serviços Mococa</h1>
+      </div>
+      <nav role="navigation" aria-label="Menu principal">
+        <button id="openForm" class="btn btn-light btn-sm" aria-controls="formModal" aria-expanded="false">Cadastrar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="container my-4">
+    <section aria-labelledby="title-catalog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 id="title-catalog" class="h4 mb-0">Catálogo de prestadores</h2>
+        <div class="d-flex gap-2 align-items-center">
+          <input id="search" class="form-control form-control-sm" placeholder="Buscar por nome ou serviço" aria-label="Pesquisar prestadores" />
+          <button id="refresh" class="btn btn-outline-secondary btn-sm" aria-label="Atualizar lista">⟳</button>
+        </div>
+      </div>
+
+      <div id="status" aria-live="polite" class="mb-2 small text-muted">Carregando...</div>
+
+      <div id="list" class="row g-3" role="list" aria-label="Lista de prestadores">
+
+      </div>
+    </section>
+
+    <hr class="my-4">
+
+    <section aria-labelledby="about-title">
+      <h3 id="about-title" class="h6">Instruções</h3>
+      <p class="text-muted">Este exemplo mostra uso de fetch (API externa), Geolocation (API nativa), Service Worker (cache) e boas práticas de acessibilidade.</p>
+      <div class="d-flex gap-2">
+        <button id="locate" class="btn btn-outline-primary btn-sm" aria-label="Exibir minha localização">Minha localização</button>
+        <span id="coords" class="ms-2 small text-muted" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" tabindex="-1" id="formModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modalTitle" class="modal-title">Cadastrar prestador</h5>
+          <button type="button" class="btn-close" id="closeForm" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form" aria-describedby="helpText" novalidate>
+            <div id="helpText" class="form-text mb-2">Preencha os campos marcados.</div>
+
+            <div class="mb-2">
+              <label for="name" class="form-label">Nome *</label>
+              <input id="name" class="form-control" required aria-required="true" />
+            </div>
+
+            <div class="mb-2">
+              <label for="service" class="form-label">Serviço *</label>
+              <input id="service" class="form-control" required aria-required="true" />
+            </div>
+
+            <div class="mb-2">
+              <label for="email" class="form-label">E-mail</label>
+              <input id="email" type="email" class="form-control" aria-describedby="emailHelp" />
+              <div id="emailHelp" class="form-text">Opcional.</div>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-success">Enviar</button>
+              <button type="button" id="cancel" class="btn btn-secondary ms-2">Cancelar</button>
+            </div>
+
+            <div id="formStatus" class="small" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js" defer></script>
+
+</body>
+</html>
