@@ -20,7 +20,23 @@ function mostrarDataHora() {
   console.log("Minutos:", data.getMinutes());  
   console.log("Segundos:", data.getSeconds());
 
-  console.log("Desafio: "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds()+" "+0+data.getDate()+"/"+ 0+mes+"/"+data.getFullYear())
+
+
+
+
+  console.log("Desafio: "+data.getHours()+":"+data.getMinutes()+":"+data.getSeconds()+" "+data.getDate()+"/"+mes+"/"+data.getFullYear());
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 mostrarDataHora();
