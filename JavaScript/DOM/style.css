@@ -1,0 +1,17 @@
+.botao {
+    background-color: #19B5FF;
+    color: white;
+    font-size: 22px;
+    padding: 18px 60px;
+    border-radius: 50px;
+    border: 10px solid #1A4052;
+    cursor: pointer;
+}
+
+.botao:active {
+    transform: translateY(4px);
+}
+
+.destaque {
+    background-color: yellow;
+}
