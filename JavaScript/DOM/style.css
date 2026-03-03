@@ -8,10 +8,11 @@
     cursor: pointer;
 }
 
-.botao:active {
-    transform: translateY(4px);
-}
 
-.destaque {
-    background-color: yellow;
-}
+
+
+
+
+/* .botao:active {
+    transform: translateY(4px);
+} */
