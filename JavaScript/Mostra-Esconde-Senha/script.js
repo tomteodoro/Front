@@ -1,5 +1,5 @@
-let senha = document.getElementById('senha')
-let botaoSenha = document.getElementById('botaoSenha')
+let senha = document.querySelector('#senha')
+let botaoSenha = document.querySelector('#botaoSenha')
 
 botaoSenha.addEventListener("click", function () {
     if (senha.type === 'password') {
