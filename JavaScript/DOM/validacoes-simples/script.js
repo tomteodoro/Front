@@ -24,12 +24,12 @@ senha.addEventListener("keyup", function () {
     if (senha.value.length < 6) {
         feedback.textContent = "Senha fraca";
         feedback.style.color = "red";
-    } else if (senha.value.length >= 6 && senha.value.length < 10) {
+    // } else if (senha.value.length >= 6 && senha.value.length < 10) {
+    //     feedback.textContent = "Senha aceitável";
+    //     feedback.style.color = "orange";
+    } else {
         feedback.textContent = "Senha aceitável";
         feedback.style.color = "orange";
-    } else {
-        feedback.textContent = "Senha forte";
-        feedback.style.color = "green";
     }
 
 });
