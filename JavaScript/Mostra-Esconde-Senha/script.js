@@ -1,12 +1,13 @@
-let senha = document.querySelector('#senha')
-let botaoSenha = document.querySelector('#botaoSenha')
+let input = document.querySelector("#senha");
+let botao = document.querySelector("#botaoSenha");
 
-botaoSenha.addEventListener("click", function () {
-    if (senha.type === 'password') {
-        senha.setAttribute('type', 'text')
-        botaoSenha.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+
+botao.addEventListener("click",function(){
+    if (input.type === "password") {
+        input.setAttribute('type','text');
+        botao.classList.replace('bi-eye-fill','bi-eye-slash-fill');
     } else {
-        senha.setAttribute('type', 'password')
-        botaoSenha.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+        input.setAttribute('type','password');
+        botao.classList.replace('bi-eye-slash-fill','bi-eye-fill');
     }
 });
