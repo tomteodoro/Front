@@ -1,12 +1,10 @@
 // E-MAIL
 let email = document.querySelector("#email");
 let msgEmail = document.querySelector("#msgEmail");
-
 // SENHA
 let senha = document.querySelector("#senha");
 let msgSenha = document.querySelector("#msgSenha");
 let forcaSenha = "";
-
 // VALIDAR e ENVIO
 let validar = document.querySelector("#validar");
 let msgEnvio = document.querySelector("#msgEnvio");
@@ -33,7 +31,9 @@ validar.addEventListener("click", function () {
 
     msgEnvio.textContent = "";
 
-    if (!email.value.includes("@") || !email.value.includes(".")) {
+    let mascara = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!mascara.test(email.value)) {
         msgEmail.textContent = "E-mail inválido. Exemplo: texto@email.com";
         msgEmail.style.color = "red";
         return;
