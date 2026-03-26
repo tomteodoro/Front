@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  gap: 20px;                 /* espaço entre form e imagem */
+  height: 100vh;             /* ocupa a tela inteira */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;    /* inputs em coluna */
+  gap: 10px;
+}
+
+img {
+  max-width: 300px;
+}
