@@ -1,0 +1,74 @@
+:root {
+  --bg: #0f2027;
+  --card: rgba(255,255,255,0.05);
+  --text: #ffffff;
+  --accent: #00f2fe;
+}
+
+body.light {
+  --bg: #f0f0f0;
+  --card: white;
+  --text: #111;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.dashboard {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.chart {
+  margin-top: 30px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Futurista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="dashboard">
+  <header>
+    <h1>🚀 Painel Inteligente</h1>
+    <button onclick="toggleTheme()">Alternar Tema</button>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <h2>Usuários</h2>
+      <p id="users">0</p>
+    </div>
+    <div class="card">
+      <h2>Vendas</h2>
+      <p id="sales">0</p>
+    </div>
+    <div class="card">
+      <h2>Performance</h2>
+      <p id="performance">0%</p>
+    </div>
+  </section>
+
+  <section class="chart">
+    <h2>📊 Atividade</h2>
+    <canvas id="chartCanvas"></canvas>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
