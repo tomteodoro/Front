@@ -52,11 +52,11 @@ botaoAdicionar.addEventListener("click", function() {
     lista.appendChild(novoItem);
     input.value = "";
 
-    // novoItem.addEventListener("click", function() {
-    // if (confirm("Deseja remover este item?")) {
-    //   novoItem.remove();
-    // }
-    // });
+    novoItem.addEventListener("click", function() {
+    if (confirm("Deseja remover este item?")) {
+      novoItem.remove();
+    }
+    });
   }
 });
 
