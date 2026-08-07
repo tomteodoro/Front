@@ -21,7 +21,7 @@ class Carro {
     acelerar() {
         console.log("Acelerando");
     }
-    
+
     frear() {
         console.log(`${this.modelo} freiou.`);
     }
