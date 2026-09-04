@@ -30,10 +30,10 @@ class GerenteProduto {
     }
 
     salvarProdutos() {
-        if (this.produtos.length === 0) {
-            localStorage.removeItem("produtos");
-            return;
-        }
+        // if (this.produtos.length === 0) {
+        //     localStorage.removeItem("produtos");
+        //     return;
+        // }
         localStorage.setItem(
             "produtos",
             JSON.stringify(this.produtos)

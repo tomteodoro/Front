@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+
+    <style>
+        #areaFoto {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #areaFoto img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cadastro de Usuário</h1>
+
+    <form>
+
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text">
+
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input id="email" type="email">
+
+        <div id="areaFoto">
+            Arraste uma foto para cá
+        </div>
+
+        <br>
+
+        <button type="submit">
+            Cadastrar
+        </button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
